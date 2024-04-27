@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestFragment">
+
+    <TextView
+        android:id="@+id/tv_pilihmisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Ayo Pilih Misi Kalian!"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pilihmisi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuest"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivHewan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded"
+                    android:contentDescription="@string/ivfindanimal"
+                    app:srcCompat="@drawable/reptile" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="14dp"
+                        android:text="Reptil"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="334dp"
+                        android:layout_height="34dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Embark on a reptilian adventure at the zoo, where ancient scales of these fascinating creatures!"
+                        android:textSize="14sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toStartOf="@id/buttonreptil"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonreptil"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:backgroundTint="@color/primary"
+                        app:cornerRadius="6dp"
+                        android:layout_marginHorizontal="12dp"
+                        app:icon="@drawable/link"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuest2"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivHewan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded"
+                    android:contentDescription="@string/ivfindanimal"
+                    app:srcCompat="@drawable/aves" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardDesc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="14dp"
+                        android:text="Aves"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="334dp"
+                        android:layout_height="34dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Soar into the captivating realm of avian wonders at the zoo, where the skies come alive with our feathered friends!"
+                        android:textSize="14sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toStartOf="@id/buttonaves"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView62" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonaves"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:backgroundTint="@color/primary"
+                        app:cornerRadius="6dp"
+                        android:layout_marginHorizontal="12dp"
+                        app:icon="@drawable/link"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuest3"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivHewan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded"
+                    android:contentDescription="@string/ivfindanimal"
+                    app:srcCompat="@drawable/pisces" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardDesc3"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="14dp"
+                        android:text="Pisces"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="334dp"
+                        android:layout_height="34dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Dive into the mesmerizing world of Pisces at the zoo's aquatic wonderland!"
+                        android:textSize="14sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toStartOf="@id/buttonPisces"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView63" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonPisces"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:backgroundTint="@color/primary"
+                        app:cornerRadius="6dp"
+                        android:layout_marginHorizontal="12dp"
+                        app:icon="@drawable/link"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuest4"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivHewan4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded"
+                    android:contentDescription="@string/ivfindanimal"
+                    app:srcCompat="@drawable/mammal" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardDesc4"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginVertical="14dp"
+                        android:text="Pisces"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="334dp"
+                        android:layout_height="34dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Dive into the mesmerizing world of Pisces at the zoo's aquatic wonderland!"
+                        android:textSize="14sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toStartOf="@id/buttonmamalia"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView64" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonmamalia"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:backgroundTint="@color/primary"
+                        app:cornerRadius="6dp"
+                        android:layout_marginHorizontal="12dp"
+                        app:icon="@drawable/link"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

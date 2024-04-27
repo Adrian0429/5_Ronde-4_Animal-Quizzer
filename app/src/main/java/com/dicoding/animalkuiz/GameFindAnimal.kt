@@ -36,7 +36,8 @@ class GameFindAnimal : Fragment() {
         navController = Navigation.findNavController(view)
         val buttonGame = view.findViewById<MaterialButton>(R.id.buttonGame)
 
-        // Set OnClickListener for the button
+        val animalType = arguments?.getString("animal_type")
+
         buttonGame.setOnClickListener {
             navController.navigate(R.id.ScanFragment)
         }
@@ -59,7 +60,7 @@ class GameFindAnimal : Fragment() {
                 }
             }
         })
-        viewModel.fetchQuestForUserByAnimalId("e9228b40-044f-4cc2-b3f8-ec41ab838dbf")
+        viewModel.fetchQuestForUserByAnimalId(animalType.toString())
 
     }
 

@@ -1,12 +1,9 @@
 package com.dicoding.animalkuiz
 
-import android.content.pm.PackageManager
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.dicoding.animalkuiz.databinding.ActivityMainBinding
@@ -16,7 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -37,10 +33,24 @@ class MainActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_container)
 
+
+        val animalType = intent.getStringExtra("animal_type")
+
+        // Pass animal_type to GameFindAnimal fragment if needed
+        if (animalType != null) {
+            // Define a bundle and add the animal_type
+            val bundle = Bundle()
+            bundle.putString("animal_type", animalType)
+
+            navController.navigate(R.id.GameFragment, bundle)
+        }
+
+        // Set up the bottom navigation view
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navbar)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_game -> {
+
                     navController.navigate(R.id.GameFragment)
                     true
                 }
@@ -51,20 +61,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-//        requestStoragePermissionIfNeeded()
     }
-
-//    private fun requestStoragePermissionIfNeeded() {
-//
-//        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE)
-//            != PackageManager.PERMISSION_GRANTED
-//        ) {
-//            ActivityCompat.requestPermissions(
-//                this,
-//                arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
-//                STORAGE_PERMISSION_REQUEST_CODE
-//            )
-//        }
-//    }
 
 }

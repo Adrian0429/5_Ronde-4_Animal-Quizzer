@@ -20,6 +20,11 @@
         android:label="ScanFragment" />
 
 
+    <fragment
+        android:id="@+id/QuestionFragment"
+        android:name="com.dicoding.animalkuiz.QuestionFragment"
+        android:label="ScanFragment" />
+
 
 
 </navigation>
