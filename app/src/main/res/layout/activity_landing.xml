@@ -15,7 +15,7 @@
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="16dp"
-        android:text="Lets learn about animals in the zoo!"
+        android:text="Mari Belajar Tentang Hewan di Kebun Binatang Surabaya !"
         android:textAlignment="center"
         android:textSize="32sp"
         android:textStyle="bold"

@@ -27,15 +27,11 @@ class ActivityLanding : AppCompatActivity() {
                     )
         }
 
-        // Find the button by its ID
         val button = findViewById<MaterialButton>(R.id.button)
 
-        // Set an OnClickListener on the button
         button.setOnClickListener {
-            // Create an Intent to start MainActivity
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
 
-            // Start the MainActivity
             startActivity(intent)
         }
     }
