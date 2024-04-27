@@ -4,19 +4,23 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <!--<provider
+    <!--
+<provider
     &lt;!&ndash;android:name="androidx.core.content.FileProvider"
     android:authorities="com.example.barcodescanner.fileprovider"
     android:exported="false"
     android:grantUriPermissions="true">&ndash;&gt;
 
-</provider>-->
+</provider>
+    -->
     <meta-data
         android:name="com.google.android.gms.vision.DEPENDENCIES"
         android:value="barcode" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,23 +31,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Animalkuiz"
         tools:targetApi="31">
+        <activity
+            android:name=".Splash"
+            android:exported="true">
 
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".ActivityLanding"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_landing"
             android:theme="@style/Theme.Animalkuiz.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
