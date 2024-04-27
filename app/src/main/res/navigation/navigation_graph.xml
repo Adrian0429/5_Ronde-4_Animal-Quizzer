@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/GameFragment">
+
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.dicoding.animalkuiz.GameFindAnimal"
+        android:label="GameFragment" />
+
+    <fragment
+        android:id="@+id/InventoryFragment"
+        android:name="com.dicoding.animalkuiz.InventoryFragment"
+        android:label="InventoryFragment"/>
+
+    <fragment
+        android:id="@+id/ScanFragment"
+        android:name="com.dicoding.animalkuiz.ScanFragment"
+        android:label="ScanFragment" />
+
+
+</navigation>
