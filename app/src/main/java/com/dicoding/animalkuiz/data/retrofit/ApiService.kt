@@ -59,7 +59,8 @@ interface ApiService {
 
     @GET("quizzes/{animal_id}")
     fun getQuiz(
-        @Path("animal_id") id: String
+        @Path("animal_id") id: String,
+        @Header("Authorization") token: String
     ): Call<GetQuiz>
 
     @PATCH("quizzes")

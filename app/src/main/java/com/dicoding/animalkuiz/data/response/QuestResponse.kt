@@ -21,6 +21,21 @@ data class GetAllUserQuest(
 ) : Parcelable
 
 @Parcelize
+data class ResultResponse(
+	@field:SerializedName("data")
+	val data: DataItemQuest? = null,
+
+	@field:SerializedName("success")
+	val success: Boolean? = null,
+
+	@field:SerializedName("message")
+	val message: String? = null,
+
+	@field:SerializedName("status")
+	val status: Int? = null
+): Parcelable
+
+@Parcelize
 data class DataItemQuest(
 
 	@field:SerializedName("step")

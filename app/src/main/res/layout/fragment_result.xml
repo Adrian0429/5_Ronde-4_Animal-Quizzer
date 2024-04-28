@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/ResultFragment"
     tools:context=".ResultFragment">
 
     <!-- ImageView -->
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/ivfindanimal"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/result_img" />
+        tools:src="@drawable/result_img" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rounded_container"
@@ -47,34 +48,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_congrats" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardHewan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="8dp"
-            app:cardBackgroundColor="@color/primary_washed"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_animalName"
-            app:strokeColor="@color/primary"
-            app:strokeWidth="1.5dp">
-
-            <TextView
-                android:id="@+id/tv_characteristic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="4dp"
-                android:text="Karakteristik"
-                android:textColor="@color/primary"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_congrats" />
-
-        </com.google.android.material.card.MaterialCardView>
-
         <TextView
             android:id="@+id/tv_desc"
             android:layout_width="match_parent"
@@ -85,7 +58,7 @@
             android:text="askdfjalksdjfl;akjsd;lfakjsd;flakjsd;fakjsd;falksdf;"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardHewan" />
+            app:layout_constraintTop_toBottomOf="@id/tv_animalName" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button"
