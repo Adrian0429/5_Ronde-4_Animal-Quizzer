@@ -33,12 +33,14 @@ interface ApiService {
     fun getAllAnimals(): Call<GetAllAnimal>
 
     @GET("animals/inventory")
-    fun getAllAnimalsInventory(): Call<GetInventory>
-
-    @GET("animals/inventory")
-    fun getAnimalById(
-        @Path("animal_id") id: String,
+    fun getAllAnimalsInventory(
         @Header("Authorization") token: String
+    ): Call<GetInventory>
+
+    @GET("animals/{animal_id}")
+    fun getAnimalById(
+        @Header("Authorization") token: String,
+        @Path("animal_id") id: String
     ): Call<GetAnimalById>
 
     @GET("quests")

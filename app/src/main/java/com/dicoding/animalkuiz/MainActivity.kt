@@ -36,16 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         val animalType = intent.getStringExtra("animal_type")
 
-        // Pass animal_type to GameFindAnimal fragment if needed
         if (animalType != null) {
-            // Define a bundle and add the animal_type
             val bundle = Bundle()
             bundle.putString("animal_type", animalType)
 
             navController.navigate(R.id.GameFragment, bundle)
         }
 
-        // Set up the bottom navigation view
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navbar)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
