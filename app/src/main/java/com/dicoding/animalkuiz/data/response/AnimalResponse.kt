@@ -97,6 +97,15 @@ data class DetailAnimal(
 	val food: String? = null,
 
 	@field:SerializedName("reproduction")
-	val reproduction: String? = null
+	val reproduction: String? = null,
+
+	@field:SerializedName("silhouette_image")
+	val silhouetteImage: String? = null,
+
+	@field:SerializedName("real_image")
+	val realImage: String? = null,
+
+	@field:SerializedName("badge_image")
+	val badgeImage: String? = null,
 ) : Parcelable
 

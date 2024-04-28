@@ -36,7 +36,10 @@ interface ApiService {
     fun getAllAnimalsInventory(): Call<GetInventory>
 
     @GET("animals/inventory")
-    fun getAnimalById(): Call<GetAnimalById>
+    fun getAnimalById(
+        @Path("animal_id") id: String,
+        @Header("Authorization") token: String
+    ): Call<GetAnimalById>
 
     @GET("quests")
     fun getAllQuestofUser(): Call<GetAllUserQuest>
@@ -54,7 +57,8 @@ interface ApiService {
 
     @GET("quizzes/{animal_id}")
     fun getQuiz(
-        @Path("animal_id") id: String
+        @Path("animal_id") id: String,
+        @Header("Authorization") token: String
     ): Call<GetQuiz>
 
     @PATCH("quizzes")

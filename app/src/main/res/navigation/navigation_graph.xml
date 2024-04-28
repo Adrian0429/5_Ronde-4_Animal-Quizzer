@@ -19,12 +19,15 @@
         android:name="com.dicoding.animalkuiz.ScanFragment"
         android:label="ScanFragment" />
 
-
     <fragment
         android:id="@+id/QuestionFragment"
         android:name="com.dicoding.animalkuiz.QuestionFragment"
-        android:label="ScanFragment" />
+        android:label="QuestionFragment" />
 
+    <fragment
+        android:id="@+id/ResultFragment"
+        android:name="com.dicoding.animalkuiz.ResultFragment"
+        android:label="ResultFragment"/>
 
 
 </navigation>
